@@ -1,0 +1,122 @@
+﻿body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+#main-panel {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: baseline;
+    border: solid;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: lightblue;
+    overflow-x: hidden;
+}
+
+.panel {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(18, 102, 23,0.7);
+    background-color: rgba(255, 255, 255,0.95);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.panel-header {
+    padding: 10px 10px 5px 10px;
+}
+
+.panel-body {
+    padding: 5px 10px 5px 10px;
+    max-height: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    width: 100%;
+    max-height: inherit;
+}
+
+.panel-footer {
+    padding: 10px 10px 10px 10px;
+}
+
+.panel .radio {
+    transform: scale(1.5)
+}
+
+.input-group-main {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.input-large input, .input-large .input-group-text {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.input-group-main .helper {
+    color: rgb(245, 117, 66)
+}
+
+.form-control-group {
+    display: flex;
+    padding: 5px 5px 10px 5px;
+}
+
+    .form-control-group > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .form-control-group .helper {
+        color: rgb(245, 117, 66)
+    }
+
+
+
+.panel .input-group {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel .input-group.full {
+    width: 100%;
+}
+
+.panel-body p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.formula {
+    font-size: 26px;
+    font-weight: 800;
+    padding-bottom:20px;
+}
+
+    .formula .item {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .formula .answer {
+        border: solid;
+        border-radius: 5px;
+        padding: 0px 10px 0px 10px;
+        border-color: rgba(159, 162, 166,0.9);
+    }

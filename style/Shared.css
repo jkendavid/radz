@@ -1,0 +1,32 @@
+﻿.flex{
+    display:flex
+}
+
+
+.push-right{
+    margin-left:auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.bold {
+    font-weight: bold;
+}
+
+
+.underline {
+    text-decoration: underline;
+}
+
+.numberonly{
+    text-align:end;
+}
+
+.requiredlabel:after {
+    content: " *";
+    color: red;
+}

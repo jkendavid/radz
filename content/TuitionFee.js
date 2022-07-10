@@ -1,5 +1,5 @@
 var tuitionFeeList = {
-    "Year": 2023,
+    "BaseYear": 2023,
     "AnnualIncrease":0.076,
     "List": [
         {
