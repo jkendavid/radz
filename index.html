@@ -30,7 +30,7 @@
 
     <div id="main-panel">
 
-        <div id="panelIntroduction" class="panel hidden ">
+        <div id="panelIntroduction" class="panel hidden skipx">
             <div class="panel-header">
                 <h4>Life Goals</h4>
             </div>
@@ -49,7 +49,7 @@
         </div>
 
 
-        <div id="panelPersonalData" class="panel hidden ">
+        <div id="panelPersonalData" class="panel hidden skipx">
             <div class="panel-header">
                 <h4>Personal Info</h4>
             </div>
@@ -112,7 +112,7 @@
         </div>
 
 
-        <div id="panelIncomeProtection" class="panel hidden ">
+        <div id="panelIncomeProtection" class="panel hidden skipx">
 
             <div class="panel-header">
                 <h4 class="title">Income Protection</h4>
@@ -252,7 +252,7 @@
 
         </div>
 
-        <div id="panelEducationalFunding" class="panel hidden"> 
+        <div id="panelEducationalFunding" class="panel hidden">
 
             <div class="panel-header">
                 <h4 class="title">Educational Funding</h4>
@@ -271,7 +271,7 @@
                     </p>
 
                     <p>
-                        How many child do you have? Please input below.
+                        How many child below 18 years old do you have? Please input below.
                     </p>
                     <div class="input-group-main input-large">
                         <div class="input-group">
@@ -285,37 +285,206 @@
 
                 <div class="panel-page hidden">
                     <p>
-                        Input the name, age and select school where would you like them to finish their college. If the school your prefer is not on the list, select "others" and input the yearly estimated tuition fee.
+                        Input the name, age and select school where would you like them to finish their college. If the
+                        school your prefer is not on the list, select "others" and input the yearly estimated tuition
+                        fee.
                     </p>
                     <div class="overflow-auto">
-                    <table class="table table-sm" id="tblEducationFundingChild">
-                        <thead>
-                            <tr class="text-center">
-                                <th style="width:20px"></th>
-                                <th style="min-width:200px">Name</th>
-                                <th style="width:60px">Age</th>
-                                <th style="min-width:200px">School</th>
-                                <th style="min-width:150px">Yearly Tuition Fee</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                        <table class="table table-sm" id="tblEducationFundingChild">
+                            <thead>
+                                <tr class="text-center">
+                                    <th style="min-width:20px"></th>
+                                    <th style="min-width:200px">Name</th>
+                                    <th style="min-width:60px">Age</th>
+                                    <th style="min-width:200px">School</th>
+                                    <th style="min-width:150px">Yearly Tuition Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+                    <div id="tblEducationFundingChildHelper" class="helper"></div>
+
                 </div>
 
+                <div class="panel-page hidden">
+                    <p>
+                        Based on your inputs, to finish a 4 year course, your children will be needing a funds of
+                    </p>
+
+                    <div class="row justify-content-center formula">
+                        <div class="col-auto row">
+                            <div class="col-auto row">
+                                <div class="item" id="formulaEducationalFundingChildYearFund"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto row">
+                            <div class="col-auto">x</div>
+                            <div class="col-auto row">
+                                <div class="item">4 years</div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto row">
+                            <div class="col-auto">=</div>
+                            <div class="col-auto row">
+                                <div class="answer" id="formulaEducationalFundingChildFund"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Have you already set aside an amount to cover this?
+                    </p>
+
+                    <div id="optEducationalFundingChildFundSetAside"
+                        class="row justify-content-center radio page-input-check" pageinputcheck="false">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="optEducationalFundingChildFundSetAside"
+                                id="optEducationalFundingChildFundSetAsideYes" value="yes">
+                            <label class="form-check-label" for="optEducationalFundingChildFundSetAsideYes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="optEducationalFundingChildFundSetAside"
+                                id="optEducationalFundingChildFundSetAsideNo" value="no">
+                            <label class="form-check-label" for="optEducationalFundingChildFundSetAsideNo">No</label>
+                        </div>
+                    </div>
+
                 </div>
 
 
-                <div class="panel-footer flex">
-                    <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
-                    <button type="button" class="btn btn-primary push-right panel-button-next hidden">Next</button>
+                <div id="pageEducationalFundingFutureChild" class="panel-page hidden">
+                    <p>
+                        How many more children are you planning to have in the future? Please input below.
+                    </p>
+                    <div class="input-group-main input-large">
+                        <div class="input-group">
+                            <input id="inputEducationalFundingFutureChildCount"
+                                class="numberonly form-control page-input-check text-center" type="text"
+                                pageinputcheck="false">
+                        </div>
+                        <div class="helper"></div>
+                    </div>
+                </div>
+
+                <div class="panel-page hidden">
+                    <p>
+                        Input the target year you want to have those children and select school where would you like
+                        them to finish their college. If the
+                        school your prefer is not on the list, select "others" and input the yearly estimated tuition
+                        fee.
+                    </p>
+                    <div class="overflow-auto">
+                        <table class="table table-sm" id="tblEducationFundingFutureChild">
+                            <thead>
+                                <tr class="text-center">
+                                    <th style="min-width:20px"></th>
+                                    <th style="min-width:80px">Year</th>
+                                    <th style="min-width:200px">School</th>
+                                    <th style="min-width:150px">Yearly Tuition Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+                    <div id="tblEducationFundingFutureChildHelper" class="helper "></div>
+
+                </div>
+
+
+                <div class="panel-page hidden">
+                    <p>
+                        Based on your inputs, to finish a 4 year course, your future children will be needing a funds of
+                    </p>
+
+                    <div class="row justify-content-center formula">
+                        <div class="col-auto row">
+                            <div class="col-auto row">
+                                <div class="item" id="formulaEducationalFundingFutureChildYearFund"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto row">
+                            <div class="col-auto">x</div>
+                            <div class="col-auto row">
+                                <div class="item">4 years</div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto row">
+                            <div class="col-auto">=</div>
+                            <div class="col-auto row">
+                                <div class="answer" id="formulaEducationalFundingFutureChildFund"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Have you already set aside an amount to cover this?
+                    </p>
+
+                    <div id="optEducationalFundingFutureChildFundSetAside"
+                        class="row justify-content-center radio page-input-check" pageinputcheck="false">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"
+                                name="optEducationalFundingFutureChildFundSetAside"
+                                id="optEducationalFundingFutureChildFundSetAsideYes" value="yes">
+                            <label class="form-check-label"
+                                for="optEducationalFundingFutureChildFundSetAsideYes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"
+                                name="optEducationalFundingFutureChildFundSetAside"
+                                id="optEducationalFundingFutureChildFundSetAsideNo" value="no">
+                            <label class="form-check-label"
+                                for="optEducationalFundingFutureChildFundSetAsideNo">No</label>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
 
+            <div class="panel-footer flex">
+                <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
+                <button type="button" class="btn btn-primary push-right panel-button-next hidden">Next</button>
+            </div>
 
         </div>
+
+
+        <div id="panelRetirementPlanning" class="panel hidden">
+
+            <div class="panel-header">
+                <h4 class="title">Retirement Planning</h4>
+            </div>
+            <div class="panel-body">
+                <p>Another milestone that we need to prepare for is retirement. How do you see yourself at retirement? Do you already have plans on how to spend your retirement days? We all look forward to the day that we would be able to enjoy all the things we want to do because we have the time to do them. But this is dependent on how much funds we have set aside for ourselves. We all want a worry-free life at retirement with enough funds for our basic needs and for all the things we wish to enjoy like travel, rest and relaxation, business venture, and others. Most people rely on company retirement programs or government pension. Unfortunately, in most cases, these retirement funds are not aligned to support the lifestyle they want . This is why we encourage individuals like you to put up a personal retirement plan.</p>
+                <p>to do</p>
+            
+            </div>
+            <div class="panel-footer flex">
+                <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
+                <button type="button" class="btn btn-primary push-right panel-button-next hidden">Next</button>
+            </div>
+        </div>
+
+
+    </div>
 
 
 
@@ -331,8 +500,8 @@
 <script src="script/Load.js"></script>
 <script src="script/Shared.js"></script>
 
+<script src="script/Main.js"></script>
+
 <script src="script/IncomeProtection.js"></script>
 <script src="script/PersonalData.js"></script>
 <script src="script/EducationalFunding.js"></script>
-
-<script src="script/Main.js"></script>

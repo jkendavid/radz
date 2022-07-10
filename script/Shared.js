@@ -7,16 +7,18 @@ function formatnumberonly(v) {
 }
 
 
-$('.numberonly').on('input', function () {
-    var c = this.selectionStart,
+$(document).on('input','.numberonly', function (e) {
+    var control = e.target
+    var c = control.selectionStart,
         r = /[^0-9]/gi,
-        v = $(this).val();
+        v = $(control).val();
     if (r.test(v)) {
-        $(this).val(v.replace(r, ''));
+        $(control).val(v.replace(r, ''));
         c--;
     }
-    this.setSelectionRange(c, c);
+    control.setSelectionRange(c, c);
 })
+
 
 
 function isEmail(email) {
@@ -29,6 +31,12 @@ function updateInputHelper(control, text) {
     $(control).closest('.form-control-group').find('.helper').html(text)
 
 }
+
+function updateInputHelper(control, text) {
+    $(control).closest('.form-control-group,.input-group-main').find('.helper').html(text)
+
+}
+
 
 function isName(name) {
     var regex = /^[a-z ,.'-]+$/i;
@@ -44,3 +52,6 @@ function isMobileNumber(name) {
 
 
 
+function scrollDown(){
+    $("#main-panel").animate({ scrollTop: $(document).height() }, 1000);
+}

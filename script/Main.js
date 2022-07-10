@@ -41,6 +41,7 @@ $('input .page-input-check').blur(function () {
     pageNextCheck(control)
 });
 
+
 $('input.page-input-check').blur(function () {
     var control = $(this);
     if (control.hasClass('numberonly')) control.val(formatnumberonly(control.val()))
@@ -52,8 +53,16 @@ $('.page-input-check input[type="radio"]').change(function () {
 });
 
 
+function pageShow(page) {
+    page.show()
+    scrollDown()
+}
+
+
+
 function pageNextShow(control) {
     control.closest('.panel-page').next().show()
+    scrollDown()
 }
 
 function pageNextAllHide(control) {

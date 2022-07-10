@@ -160,7 +160,7 @@ function checkPersonalDataMobileNumberIsValid() {
     }
 
     if (!isMobileNumber(PersonalDataMobileNumber)) {
-        updateInputHelper(control, 'Invalid Mbile Number')
+        updateInputHelper(control, 'Invalid Mobile Number')
         return false
     }
 
