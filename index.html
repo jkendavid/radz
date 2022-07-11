@@ -252,7 +252,8 @@
 
         </div>
 
-        <div id="panelEducationalFunding" class="panel hidden " style="width:auto; max-width: 700px;">
+
+        <div id="panelEducationalFunding" class="panel hidden skipx" style="width:auto; max-width: 700px;">
 
             <div class="panel-header">
                 <h4 class="title">Educational Funding</h4>
@@ -274,7 +275,7 @@
                         How many child below 18 years old do you have? Please input below.
                     </p>
                     <div class="input-group-main input-large">
-                        <div class="input-group">
+                        <div class="input-group" style="width: 100px;">
                             <input id="inputEducationalFundingChildCount"
                                 class="numberonly form-control page-input-check text-center" type="text"
                                 pageinputcheck="false">
@@ -366,7 +367,7 @@
                         How many more children are you planning to have in the future? Please input below.
                     </p>
                     <div class="input-group-main input-large">
-                        <div class="input-group">
+                        <div class="input-group" style="width: 100px;">
                             <input id="inputEducationalFundingFutureChildCount"
                                 class="numberonly form-control page-input-check text-center" type="text"
                                 pageinputcheck="false">
@@ -473,9 +474,176 @@
                 <h4 class="title">Retirement Planning</h4>
             </div>
             <div class="panel-body">
-                <p>Another milestone that we need to prepare for is retirement. How do you see yourself at retirement? Do you already have plans on how to spend your retirement days? We all look forward to the day that we would be able to enjoy all the things we want to do because we have the time to do them. But this is dependent on how much funds we have set aside for ourselves. We all want a worry-free life at retirement with enough funds for our basic needs and for all the things we wish to enjoy like travel, rest and relaxation, business venture, and others. Most people rely on company retirement programs or government pension. Unfortunately, in most cases, these retirement funds are not aligned to support the lifestyle they want . This is why we encourage individuals like you to put up a personal retirement plan.</p>
-                <p>to do</p>
-            
+
+                <div class="panel-page">
+                    <p>Another milestone that we need to prepare for is retirement. How do you see yourself at
+                        retirement? Do you already have plans on how to spend your retirement days? We all look forward
+                        to the day that we would be able to enjoy all the things we want to do because we have the time
+                        to do them. But this is dependent on how much funds we have set aside for ourselves. We all want
+                        a worry-free life at retirement with enough funds for our basic needs and for all the things we
+                        wish to enjoy like travel, rest and relaxation, business venture, and others. Most people rely
+                        on company retirement programs or government pension. Unfortunately, in most cases, these
+                        retirement funds are not aligned to support the lifestyle they want . This is why we encourage
+                        individuals like you to put up a personal retirement plan.</p>
+                    <p>
+                        What age do you want to retire?
+                    </p>
+                    <div class="input-group-main input-large">
+                        <div class="input-group" style="width: 100px;">
+                            <input id="inputRetirementPlanningRetirementAge"
+                                class="numberonly form-control page-input-check text-center" type="text"
+                                pageinputcheck="false">
+                        </div>
+                        <div class="helper"></div>
+                    </div>
+                </div>
+
+
+                <div class="panel-page hidden">
+                    <p>
+                        You have <span id="spanRetirementPlanningYearsBeforeRetirement"></span> years to prepare for
+                        your retirement.
+                        <span id="sRetirementPlanningYearsBeforeRetirement"> </span>
+                    </p>
+                    <p>
+                        May I know your estimated current income? This is the amount that takes care of your current
+                        needs for yourself and family. However, we want to estimate an income that you will be needing
+                        in the future which could be higher than your current one.
+                    </p>
+
+                    <div class="input-group-main input-large">
+                        <div class="input-group" style="width: 300px;">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="inputRetirementPlanningCurrentIncome"
+                                class="numberonly form-control page-input-check" type="text" pageinputcheck="false">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                        <h4>Monthly</h4>
+                        <div class="helper"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="panel-page hidden">
+                    <p>What percentage of your current income would you want to guarantee yourself? This is the minimum
+                        income at retirement that you want to pay yourself.</p>
+                    <div class="input-group-main input-large">
+                        <div class="input-group" style="width: 150px;">
+                            <input id="inputRetirementPlanningCurrentIncomePercent"
+                                class="numberonly form-control page-input-check" type="text" pageinputcheck="false">
+                            <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <div class="helper"></div>
+                    </div>
+                </div>
+
+                <div class="panel-page hidden">
+                    <p>
+                        This is the minimum income at retirement that you want to pay yourself.
+                    </p>
+
+                    <div class="row justify-content-center formula">
+                        <div class="col-auto row">
+                            <div class="col-auto row">
+                                <div class="item" id="formulaRetirementPlanningCurrentIncome"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto row">
+                            <div class="col-auto">x</div>
+                            <div class="col-auto row">
+                                <div class="item" id="formulaRetirementPlanningCurrentIncomePercent"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto row">
+                            <div class="col-auto">x</div>
+                            <div class="col-auto row">
+                                <div class="item">12</div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto row">
+                            <div class="col-auto">=</div>
+                            <div class="col-auto row">
+                                <div class="answer" id="formulaRetirementPlanningRetirementIncomePerYear"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p>
+                        how many years would you want to guarantee this fund?
+                    </p>
+
+                    <div class="input-group-main input-large">
+                        <div class="input-group" style="width: 160px;">
+                            <input id="inputRetirementPlanningRetirementIncomeYear"
+                                class="numberonly form-control page-input-check" type="text" pageinputcheck="false">
+                            <div class="input-group-append">
+                                <span class="input-group-text">year</span>
+                            </div>
+                        </div>
+                        <div class="helper"></div>
+                    </div>
+
+                </div>
+
+                <div class="panel-page hidden">
+
+                    <p>
+                        You will be needing a retirement funds of
+                    </p>
+
+                    <div class="row justify-content-center formula">
+                        <div class="col-auto row">
+                            <div class="col-auto row">
+                                <div class="item" id="formulaRetirementPlanningRetirementIncomePerYear2"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto row">
+                            <div class="col-auto">x</div>
+                            <div class="col-auto row">
+                                <div class="item" id="formulaRetirementPlanningRetirementIncomeYear"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-auto row">
+                            <div class="col-auto">=</div>
+                            <div class="col-auto row">
+                                <div class="answer" id="formulaRetirementPlanningRetirementIncome"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Have you started saving for this fund?
+                    </p>
+
+                    <div id="optRetirementPlanningFundStarted" class="row justify-content-center radio page-input-check"
+                        pageinputcheck="false">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="optRetirementPlanningFundStarted"
+                                id="optRetirementPlanningFundStartedYes" value="yes">
+                            <label class="form-check-label" for="optRetirementPlanningFundStartedYes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="optRetirementPlanningFundStarted"
+                                id="optRetirementPlanningFundStartedNo" value="no">
+                            <label class="form-check-label" for="optRetirementPlanningFundStartedNo">No</label>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="panel-footer flex">
                 <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
@@ -483,6 +651,37 @@
             </div>
         </div>
 
+
+        <div id="panelRetirementPlanning" class="panel hidden">
+            <div class="panel-header">
+                <h4 class="title">Living with Impaired Health</h4>
+            </div>
+            <div class="panel-body">
+                <p>
+                    We may , at one time in our lives, experience unexpected emergencies because of sickness or
+                    accident. These could take a huge toll on our life savings or if none, can give us a lot of
+                    financial problems. Medical expenses such as hospitalization, doctor’s fees, surgery, medicines are
+                    getting more and more expensive. The only way for us to prevent future financial worries is for us
+                    to anticipate and guarantee funds for medical needs and emergencies. How much do you think would you
+                    be needing in case something happens to you?
+                </p>
+
+                <p>
+                    Another important life goal is having funds for large purchases in the future like home purchase,
+                    travel, capital for a business venture. May I know if you are planning any large purchase what would
+                    entail you to set aside funds today?
+                </p>
+
+                <p>to do</p>
+
+            </div>
+            <div class="panel-footer flex">
+                <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
+                <button type="button" class="btn btn-primary push-right panel-button-next hidden">Next</button>
+            </div>
+
+
+        </div>
 
     </div>
 
@@ -505,3 +704,4 @@
 <script src="script/IncomeProtection.js"></script>
 <script src="script/PersonalData.js"></script>
 <script src="script/EducationalFunding.js"></script>
+<script src="script/RetirementPlanning.js"></script>
