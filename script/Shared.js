@@ -53,5 +53,5 @@ function isMobileNumber(name) {
 
 
 function scrollDown(){
-    $("#main-panel").animate({ scrollTop: $(document).height() }, 1000);
+    $("#main-panel").animate({ scrollTop: $('#main-panel').height() }, 1000);
 }
