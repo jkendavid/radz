@@ -22,6 +22,7 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/19b765e216.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://kit.fontawesome.com/19b765e216.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -468,7 +469,7 @@
         </div>
 
 
-        <div id="panelRetirementPlanning" class="panel hidden">
+        <div id="panelRetirementPlanning" class="panel hidden skipx">
 
             <div class="panel-header">
                 <h4 class="title">Retirement Planning</h4>
@@ -476,15 +477,27 @@
             <div class="panel-body">
 
                 <div class="panel-page">
-                    <p>Another milestone that we need to prepare for is retirement. How do you see yourself at
-                        retirement? Do you already have plans on how to spend your retirement days? We all look forward
-                        to the day that we would be able to enjoy all the things we want to do because we have the time
-                        to do them. But this is dependent on how much funds we have set aside for ourselves. We all want
-                        a worry-free life at retirement with enough funds for our basic needs and for all the things we
-                        wish to enjoy like travel, rest and relaxation, business venture, and others. Most people rely
-                        on company retirement programs or government pension. Unfortunately, in most cases, these
-                        retirement funds are not aligned to support the lifestyle they want . This is why we encourage
-                        individuals like you to put up a personal retirement plan.</p>
+                    <p>
+                        Another milestone that we need to prepare for is retirement. How do you see yourself at
+                        retirement? Do you already have plans on how to spend your retirement days?
+                    </p>
+                    <p>
+                        We all look forward to the day that we would be able to enjoy all the things we want to do
+                        because we have the time to do them. But this is dependent on how much funds we have set aside
+                        for ourselves.
+                    </p>
+                    <p>
+                        We all want a worry-free life at retirement with enough funds for our basic needs and for all
+                        the things we wish to enjoy like travel, rest and relaxation, business venture, and others.
+                    </p>
+                    <p>
+                        Most people rely on company retirement programs or government pension. Unfortunately, in most
+                        cases, these retirement funds are not aligned to support the lifestyle they want.
+                    </p>
+                    <p>
+                        This is why we encourage individuals like you to put up a personal retirement plan.
+                    </p>
+
                     <p>
                         What age do you want to retire?
                     </p>
@@ -652,7 +665,7 @@
         </div>
 
 
-        <div id="panelRetirementPlanning" class="panel hidden">
+        <div id="panelLivingWithImpairedHealth" class="panel hidden skipx">
             <div class="panel-header">
                 <h4 class="title">Living with Impaired Health</h4>
             </div>
@@ -661,20 +674,35 @@
                     We may , at one time in our lives, experience unexpected emergencies because of sickness or
                     accident. These could take a huge toll on our life savings or if none, can give us a lot of
                     financial problems. Medical expenses such as hospitalization, doctor’s fees, surgery, medicines are
-                    getting more and more expensive. The only way for us to prevent future financial worries is for us
-                    to anticipate and guarantee funds for medical needs and emergencies. How much do you think would you
-                    be needing in case something happens to you?
+                    getting more and more expensive.
                 </p>
 
                 <p>
-                    Another important life goal is having funds for large purchases in the future like home purchase,
-                    travel, capital for a business venture. May I know if you are planning any large purchase what would
-                    entail you to set aside funds today?
+                    The only way for us to prevent future financial worries is for us
+                    to anticipate and guarantee funds for medical needs and emergencies.
                 </p>
 
-                <p>to do</p>
+                <p>
+                    How much do you think would you
+                    be needing in case something happens to you?
+                </p>
 
+                <div class="input-group-main input-large">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">₱</span>
+                        </div>
+                        <input id="inputLivingWithImpairedHealth" class="numberonly form-control page-input-check"
+                            type="text" pageinputcheck="false">
+                        <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+                    <div class="helper"></div>
+                </div>
             </div>
+
+
             <div class="panel-footer flex">
                 <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
                 <button type="button" class="btn btn-primary push-right panel-button-next hidden">Next</button>
@@ -682,6 +710,237 @@
 
 
         </div>
+
+
+        <div id="panelFundAccumulation" class="panel hidden skipx">
+            <div class="panel-header">
+                <h4 class="title">Fund Accumulation</h4>
+            </div>
+            <div class="panel-body">
+
+                <div class="panel-page">
+                    <p>
+                        Another important life goal is having funds for large purchases in the future like home
+                        purchase, travel, capital for a business venture.
+                    </p>
+                    <p>
+                        May I know if you are planning any large purchase what would
+                        entail you to set aside funds today?
+                    </p>
+
+                    <p>Please input the estimated fund amount.</p>
+
+                    <div class="input-group-main input-large">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="inputFundAccumulationAmount" class="numberonly form-control page-input-check"
+                                type="text" pageinputcheck="false">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                        <div class="helper"></div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="panel-footer flex">
+                <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
+                <button type="button" class="btn btn-primary push-right panel-button-next hidden">Next</button>
+            </div>
+
+
+        </div>
+
+
+        <div id="panelLifeGoalsRanking" class="panel hidden skipx">
+            <div class="panel-header">
+                <h4 class="title">Life Goals Ranking</h4>
+            </div>
+            <div class="panel-body">
+
+                <div class="panel-page">
+                    <p>
+                        You have now idea about your major life goals.
+                    </p>
+                    <p>
+                        Rank the major life goals below below based on their importance (top is the most important).
+                        Click the arrow up and down button to swap their location. Click Next when done.
+                    </p>
+
+
+                    <div id="subpanelLifeGoalsRanking">
+                        <div class="lifegoalgroup">
+                            <div class="lifegoalItem">
+                                <div class="rank">1st Priority</div>
+                                <div class="lifegoalName">Income Protection</div>
+                                <div class="lifegoalDescription">Securing a comportable lifestyle for my family.</div>
+                            </div>
+                            <div class="lifegoalControl">
+                                <button class='btn btn-primary lifegoalControlUp' onclick="priortizeItemMoveUp(this)"><i
+                                        class="fa-solid fa-angle-up"></i></button>
+                                <button class='btn btn-primary lifegoalControlDown'
+                                    onclick="priortizeItemMoveDown(this)"><i
+                                        class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="lifegoalgroup">
+                            <div class="lifegoalItem">
+                                <div class="rank">2nd Priority</div>
+                                <div class="lifegoalName">Educational Funding</div>
+                                <div class="lifegoalDescription">Providing the best opportunities for my kids.</div>
+                            </div>
+                            <div class="lifegoalControl">
+                                <button class='btn btn-primary lifegoalControlUp' onclick="priortizeItemMoveUp(this)"><i
+                                        class="fa-solid fa-angle-up"></i></button>
+                                <button class='btn btn-primary lifegoalControlDown'
+                                    onclick="priortizeItemMoveDown(this)"><i
+                                        class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="lifegoalgroup">
+                            <div class="lifegoalItem">
+                                <div class="rank">3rd Priority</div>
+                                <div class="lifegoalName">Retirement Planning</div>
+                                <div class="lifegoalDescription">Enjoying life without worries at retirement.</div>
+                            </div>
+                            <div class="lifegoalControl">
+                                <button class='btn btn-primary lifegoalControlUp' onclick="priortizeItemMoveUp(this)"><i
+                                        class="fa-solid fa-angle-up"></i></button>
+                                <button class='btn btn-primary lifegoalControlDown'
+                                    onclick="priortizeItemMoveDown(this)"><i
+                                        class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="lifegoalgroup">
+                            <div class="lifegoalItem">
+                                <div class="rank">4th Priority</div>
+                                <div class="lifegoalName">Living with Impaired Health</div>
+                                <div class="lifegoalDescription">Guaranteeing funds for medical needs and emergencies.
+                                </div>
+                            </div>
+                            <div class="lifegoalControl">
+                                <button class='btn btn-primary lifegoalControlUp' onclick="priortizeItemMoveUp(this)"><i
+                                        class="fa-solid fa-angle-up"></i></button>
+                                <button class='btn btn-primary lifegoalControlDown'
+                                    onclick="priortizeItemMoveDown(this)"><i
+                                        class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="lifegoalgroup">
+                            <div class="lifegoalItem">
+                                <div class="rank">5th Priority</div>
+                                <div class="lifegoalName">Fund Accumulation</div>
+                                <div class="lifegoalDescription">Preparing for large purchases in the future.</div>
+                            </div>
+                            <div class="lifegoalControl">
+                                <button class='btn btn-primary lifegoalControlUp' onclick="priortizeItemMoveUp(this)"><i
+                                        class="fa-solid fa-angle-up"></i></button>
+                                <button class='btn btn-primary lifegoalControlDown'
+                                    onclick="priortizeItemMoveDown(this)"><i
+                                        class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel-footer flex">
+                <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
+                <button type="button" class="btn btn-primary push-right panel-button-next">Next</button>
+            </div>
+        </div>
+
+
+        <div id="panelLifeGoalsPriority" class="panel hidden">
+
+            <div class="panel-header">
+                <h4 class="title">Life Goals Ranking</h4>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="panel-page">
+
+                    <p>The best scenario is to put up a fund for all
+                        your life goals. However, it is understandable, at this point in time, if you would like to
+                        focus on the most important ones.</p>
+
+                    <p>Choose below your life goals priority.</p>
+
+                    <div id="optiLifeGoalsPriority" class="radio-column">
+                    </div>
+
+                </div>
+
+                <div class="panel-page hidden">
+                    <p>For you to address your priority, how much would you like to set aside monthly?.</p>
+                    <div class="input-group-main input-large">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="inputLifeGoalsPrioritySetAside" class="numberonly form-control page-input-check"
+                                type="text" pageinputcheck="false">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                        <div class="helper"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel-footer flex">
+                <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
+                <button type="button" class="btn btn-primary push-right panel-button-next hidden">Next</button>
+            </div>
+
+
+        </div>
+
+
+
+        <div id="panelLifeGoalssummary" class="panel hidden">
+
+            <div class="panel-header">
+                <h4 class="title">Life Goals Summary</h4>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="panel-page">
+
+                    <p>To do</p>
+                    <p>Show summary of inputs</p>
+                    <p>Print to PDF</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel-footer flex">
+                <button type="button" class="btn btn-primary panel-button-prev">Prev</button>
+                <button type="button" class="btn btn-primary push-right panel-button-print">Print</button>
+            </div>
+
+
+        </div>
+    </div>
 
     </div>
 
@@ -705,3 +964,7 @@
 <script src="script/PersonalData.js"></script>
 <script src="script/EducationalFunding.js"></script>
 <script src="script/RetirementPlanning.js"></script>
+<script src="script/LivingWithImpairedHealth.js"></script>
+<script src="script/FundAccumulation.js"></script>
+<script src="script/GoalsRanking.js"></script>
+<script src="script/GoalsPriority.js"></script>

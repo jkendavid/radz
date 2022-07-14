@@ -21,8 +21,8 @@
 .panel {
     border-style: solid;
     border-radius: 10px;
-    border-color: rgba(18, 102, 23,0.7);
-    background-color: rgba(255, 255, 255,0.95);
+    border-color: rgba(18, 102, 23, 0.7);
+    background-color: rgba(255, 255, 255, 0.95);
     width: 600px;
     display: flex;
     flex-direction: column;
@@ -30,16 +30,16 @@
     align-items: baseline;
     padding: 5px;
     margin-bottom: 30px;
-    
+
 }
 
 
 .panel-header {
-    padding: 10px 10px 5px 10px;
+    padding: 0px 10px 5px 10px;
 }
 
 .panel-body {
-    padding: 5px 10px 5px 10px;
+    padding: 0px 10px 5px 10px;
     max-height: 100%;
     flex-shrink: 1;
     flex-grow: 1;
@@ -55,6 +55,13 @@
     transform: scale(1.5)
 }
 
+.panel .radio-column {
+    transform: scale(1.5);
+    transform-origin: left top;
+    width: 70%;
+    padding-bottom: 25%;
+}
+
 .input-group-main {
     padding-bottom: 20px;
     display: flex;
@@ -66,7 +73,8 @@
 
 
 
-.input-large input, .input-large .input-group-text {
+.input-large input,
+.input-large .input-group-text {
     font-size: 26px;
     font-weight: 800;
 }
@@ -81,16 +89,16 @@
     margin: 0px 20px 0px 20px;
 }
 
-    .form-control-group > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px;
-    }
+.form-control-group>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
 
-    .helper {
-        color: rgb(245, 117, 66)
-    }
+.helper {
+    color: rgb(245, 117, 66)
+}
 
 
 
@@ -110,27 +118,99 @@
 }
 
 
-.panel-page{
-    padding-top: 20px;
-    
+.panel-page {
+    padding-top: 0px;
+
 }
 
 .formula {
     font-size: 26px;
     font-weight: 800;
-    padding-bottom:20px;
+    padding-bottom: 20px;
 }
 
-    .formula .item {
-        padding: 0px 10px 0px 10px;
-    }
+.formula .item {
+    padding: 0px 10px 0px 10px;
+}
 
-    .formula .answer {
-        border: solid;
-        border-radius: 5px;
-        padding: 0px 10px 0px 10px;
-        border-color: rgba(159, 162, 166,0.9);
-    }
+.formula .answer {
+    border: solid;
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px;
+    border-color: rgba(159, 162, 166, 0.9);
+}
 
 
-    
+
+
+
+#subpanelLifeGoalsRanking .lifegoalgroup {
+    display: flex;
+    margin: 10px;
+    border: solid;
+    border-color: rgba(87, 88, 89, 0.5);
+    border-radius: 10px;
+    background-color: rgba(176, 245, 166, 0.8);
+
+}
+
+
+
+
+
+
+
+
+#subpanelLifeGoalsRanking .lifegoalItem {
+    flex-grow: 8;
+    padding: 0px 10px 0px 10px;
+}
+
+#subpanelLifeGoalsRanking .rank {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+#subpanelLifeGoalsRanking .lifegoalName {
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#subpanelLifeGoalsRanking .lifegoalDescription {
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#subpanelLifeGoalsRanking .lifegoalControl {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+
+
+
+#subpanelLifeGoalsRanking .lifegoalControlUp {
+    border-radius: 0px 6px 0px 0px;
+
+}
+
+#subpanelLifeGoalsRanking .lifegoalControlDown {
+    border-radius: 0px 0px 6px 0px;
+
+}
+
+
+
+#subpanelLifeGoalsRanking  .lifegoalgroup:first-child  .lifegoalControlUp{
+    visibility: hidden;
+}
+
+
+#subpanelLifeGoalsRanking  .lifegoalgroup:last-child  .lifegoalControlDown{
+    visibility: hidden;
+}

@@ -1,4 +1,4 @@
-var PersonalDataDateOfBirth = '1991-11-29'
+
 
 var retirementPlanningRetirementAge
 var currentAge
